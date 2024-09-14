@@ -32,9 +32,9 @@ class NewsCrawler {
 
             entries.push({
                 title,
-                rank: parseInt(rank.replace(/[^0-9]/, '')),
-                points: parseInt(points.replace(/[^0-9]/, '')),
-                comments: parseInt(comments.replace(/[^0-9]/, ''))
+                rank: parseInt(rank.replace(/[^0-9]/, '')) || 0,
+                points: parseInt(points.replace(/[^0-9]/, '')) || 0,
+                comments: parseInt(comments.replace(/[^0-9]/, '')) || 0
             });
         }
 
