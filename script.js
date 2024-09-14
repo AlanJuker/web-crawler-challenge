@@ -40,4 +40,8 @@ class NewsCrawler {
 
         return entries;
     }
+
+    wordCounter(word) {
+        return word.split(/[\s]/).length;
+    }
 }
