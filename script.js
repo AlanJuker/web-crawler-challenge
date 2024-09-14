@@ -4,7 +4,7 @@ class NewsCrawler {
     }
 
     async fetchHtmlPage() {
-        const response = await fetch(url);
+        const response = await fetch(this.url);
 
         if (!response.ok) {
             console.error('Error fetching html content');
@@ -15,7 +15,7 @@ class NewsCrawler {
         return new DOMParser().parseFromString(htmlContent, 'text/html');
     }
 
-    async setEntries() {
+    async getEntries() {
         const htmlPage = await this.fetchHtmlPage();
         const entries = [];
         const htmlEntries = htmlPage.querySelectorAll('.athing');
@@ -23,7 +23,7 @@ class NewsCrawler {
 
         for (let i = 0; i < htmlEntries.length && i < 30; i++) {
             const entry = htmlEntries[i];
-            const nextElement = element.nextElementSibling;
+            const nextElement = entry.nextElementSibling;
 
             const title = entry.querySelector('.titleline a')?.textContent.trim();
             const rank = entry.querySelector('.rank')?.textContent.trim();
