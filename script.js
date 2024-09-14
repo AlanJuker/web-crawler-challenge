@@ -44,4 +44,16 @@ class NewsCrawler {
     wordCounter(word) {
         return word.split(/[\s]/).length;
     }
+
+    filterEntriesMoreThanFiveWords(entries) {
+        return entries
+            .filter(e => this.wordCounter(e.title) > 5)
+            .sort((a, b) => b.comments - a.comments);
+    }
+
+    filterEntriesFiveWordsOrLess(entries) {
+        return entries
+            .filter(e => this.wordCounter(e.title) <= 5)
+            .sort((a, b) => b.points - a.points);
+    }
 }
