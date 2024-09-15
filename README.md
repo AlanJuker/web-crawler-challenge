@@ -20,9 +20,12 @@
     npm install
     ```
 
-- Open the `index.html` file in your browser.
-
-- Run the tests:
+- Run the project
+- 
+   ```bash
+    npm start
+    ```
+- Run the tests
 
     ```bash
     npm test
@@ -34,6 +37,7 @@ Due to CORS restrictions from Hacker News, you'll need to install a browser exte
 Recommended extension for Chrome: 
 [Allow CORS: Access-Control-Allow-Origin](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf).
 
+If the CORS issue persists after installing the extension, toggle the ON/OFF button.
 ## Code Structure
 
 - **newsCrawler.js**: Scrapes and filters data.
