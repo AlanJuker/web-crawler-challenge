@@ -4,7 +4,7 @@
 - This project retrieves the top 30 entries from [Hacker News](https://news.ycombinator.com/) based on the number, the title, the points, and the number of comments for each entry, and apply filtering operations.
 
 - **Filer1**: Filter all previous entries with more than five words in the title ordered by the number of comments first.
-- **Filer1**: Filter all previous entries with less than or equal to five words in the title ordered by points.
+- **Filer2**: Filter all previous entries with less than or equal to five words in the title ordered by points.
 
 ## Technologies Used
 
@@ -20,9 +20,12 @@
     npm install
     ```
 
-- Open the `index.html` file in your browser.
-
-- Run the tests:
+- Run the project
+- 
+   ```bash
+    npm start
+    ```
+- Run the tests
 
     ```bash
     npm test
@@ -34,6 +37,7 @@ Due to CORS restrictions from Hacker News, you'll need to install a browser exte
 Recommended extension for Chrome: 
 [Allow CORS: Access-Control-Allow-Origin](https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf).
 
+If the CORS issue persists after installing the extension, toggle the ON/OFF button.
 ## Code Structure
 
 - **newsCrawler.js**: Scrapes and filters data.
