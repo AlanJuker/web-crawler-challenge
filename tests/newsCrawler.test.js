@@ -1,5 +1,5 @@
-import { NewsCrawler } from '../js/newsCrawler';
-import { wordCounter } from '../js/utils';
+import { NewsCrawler } from '../src/js/newsCrawler.js';
+import { wordCounter } from '../src/js/utils.js';
 
 describe('NewsCrawler Filters', () => {
   let crawler;
